@@ -9,6 +9,7 @@ Device
 
 
 .. toctree::
+   :hidden:
    :maxdepth: -1
    :caption: Device
 
@@ -47,10 +48,11 @@ Device
    device/dev_unify_iter.rst
    device/dev_unify_nest.rst
    device/DefaultDevice:
+    """"""
+
     # noinspection PyShadowingNames
     def __init__.rst
    device/MultiDev:
-
     def __init__.rst
    device/MultiDevItem.rst
    device/MultiDevIter.rst
@@ -64,6 +66,7 @@ Device
    device/DevMapper.rst
    device/DevMapperMultiProc.rst
    device/DevManager:
+    """"""
 
     def __init__.rst
    device/Profiler.rst

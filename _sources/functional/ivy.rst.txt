@@ -1,10 +1,10 @@
 
 
 .. toctree::
+   :hidden:
    :maxdepth: -1
    :caption: Ivy
 
-   ivy/old.rst
    ivy/activations.rst
    ivy/compilation.rst
    ivy/constants.rst
@@ -22,6 +22,7 @@
    ivy/meta.rst
    ivy/nest.rst
    ivy/norms.rst
+   ivy/random.rst
    ivy/searching.rst
    ivy/set.rst
    ivy/sorting.rst
