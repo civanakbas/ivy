@@ -217,38 +217,39 @@
     <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Device</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Draws samples from a multinomial distribution. Specifically, returns a tensor</span>
-<span class="sd">        where each row contains num_samples indices sampled from the multinomial probability</span>
-<span class="sd">        distribution located in the corresponding row of tensor input.</span>
+<span class="sd">    Draws samples from a multinomial distribution. Specifically, returns a tensor</span>
+<span class="sd">    where each row contains num_samples indices sampled from the multinomial probability</span>
+<span class="sd">    distribution located in the corresponding row of tensor input.</span>
 
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        population_size</span>
-<span class="sd">            The size of the population from which to draw samples.</span>
-<span class="sd">        num_samples</span>
-<span class="sd">            Number of independent samples to draw from the population.</span>
-<span class="sd">        batch_size</span>
-<span class="sd">            Number of tensors to generate. Default is 1.</span>
-<span class="sd">        probs</span>
-<span class="sd">            The unnormalized probabilities for all elements in population,</span>
-<span class="sd">            default is uniform *[batch_shape, num_classes]*</span>
-<span class="sd">        replace</span>
-<span class="sd">            Whether to replace samples once they&#39;ve been drawn. Default is True.</span>
-<span class="sd">        device</span>
-<span class="sd">            device on which to create the array &#39;cuda:0&#39;, &#39;cuda:1&#39;, &#39;cpu&#39; etc.</span>
-<span class="sd">            (Default value = None)</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    population_size</span>
+<span class="sd">        The size of the population from which to draw samples.</span>
+<span class="sd">    num_samples</span>
+<span class="sd">        Number of independent samples to draw from the population.</span>
+<span class="sd">    batch_size</span>
+<span class="sd">        Number of tensors to generate. Default is 1.</span>
+<span class="sd">    probs</span>
+<span class="sd">        The unnormalized probabilities for all elements in population,</span>
+<span class="sd">        default is uniform *[batch_shape, num_classes]*</span>
+<span class="sd">    replace</span>
+<span class="sd">        Whether to replace samples once they&#39;ve been drawn. Default is True.</span>
+<span class="sd">    device</span>
+<span class="sd">        device on which to create the array &#39;cuda:0&#39;, &#39;cuda:1&#39;, &#39;cpu&#39; etc.</span>
+<span class="sd">        (Default value = None)</span>
 
-<span class="sd">        Returns</span>
-<span class="sd">        -------</span>
-<span class="sd">         ret</span>
-<span class="sd">            Drawn samples indices from the multinomial distribution.</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ret</span>
+<span class="sd">        Drawn samples indices from the multinomial distribution.</span>
 
-<span class="sd">        Examples</span>
-<span class="sd">        --------</span>
-<span class="sd">        &gt;&gt;&gt; y = ivy.multinomial(10, 5)</span>
-<span class="sd">        &gt;&gt;&gt; print(y)</span>
-<span class="sd">        ivy.array([[1, 8, 7, 8, 3]])</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.multinomial(10, 5)</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    ivy.array([[1, 8, 7, 8, 3]])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_cur_framework</span><span class="p">()</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span>
         <span class="n">population_size</span><span class="p">,</span> <span class="n">num_samples</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">probs</span><span class="p">,</span> <span class="n">replace</span><span class="p">,</span> <span class="n">device</span>
     <span class="p">)</span></div>
